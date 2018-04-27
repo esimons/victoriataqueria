@@ -1,0 +1,6 @@
+.Locations_paragraph {
+  text-align: center;
+}
+.Locations_paragraph:not(:first-child) {
+  padding-top: 2rem;
+}

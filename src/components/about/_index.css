@@ -1,0 +1,6 @@
+.About_paragraph {
+  text-align: center;
+}
+.About_paragraph:not(:first-child) {
+  padding-top: 2rem;
+}

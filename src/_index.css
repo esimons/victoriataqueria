@@ -10,3 +10,7 @@ body {
   padding: var(--Body-spacing--side);
   font-family: Helvetica, sans-serif;
 }
+
+a:not(:hover) {
+  text-decoration: none;
+}

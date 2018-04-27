@@ -1,0 +1,6 @@
+.Menu_paragraph {
+  text-align: center;
+}
+.Menu_paragraph:not(:first-child) {
+  padding-top: 2rem;
+}
