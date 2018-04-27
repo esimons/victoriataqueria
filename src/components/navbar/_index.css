@@ -1,0 +1,13 @@
+.Navbar {
+  display: flex;
+  padding: .5rem;
+  margin: 0 calc(-1 * var(--Body-spacing--offset));
+  background: #b20611;
+}
+.Navbar_item {
+  flex: 1 1 0px;
+  text-align: center;
+}
+.Navbar_link {
+  color: #fff;
+}

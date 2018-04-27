@@ -1,10 +1,14 @@
 import React from 'react';
 
+import Content from '../content';
+
 import './_index.css';
 
 const About = () => {
   return (
-    <div>About</div>
+    <Content>
+      <div>About</div>
+    </Content>
   )
 };
 

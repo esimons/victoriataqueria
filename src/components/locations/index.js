@@ -1,10 +1,14 @@
 import React from 'react';
 
+import Content from '../content';
+
 import './_index.css';
 
 const Locations = () => {
   return (
-    <div>Locations</div>
+    <Content>
+      <div>Locations</div>
+    </Content>
   )
 };
 

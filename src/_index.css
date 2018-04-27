@@ -1,5 +1,12 @@
+@import './styles/_reset.css';
+
+:root {
+  --Body-spacing--default: 2rem;
+  --Body-spacing--offset: var(--Body-spacing--default);
+  --Body-spacing--side: 0 var(--Body-spacing--default);
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  padding: var(--Body-spacing--side);
+  font-family: Helvetica, sans-serif;
 }

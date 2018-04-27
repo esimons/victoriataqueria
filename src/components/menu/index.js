@@ -1,10 +1,14 @@
 import React from 'react';
 
+import Content from '../content';
+
 import './_index.css';
 
 const Menu = () => {
   return (
-    <div>Menu</div>
+    <Content>
+      <div>Menu</div>
+    </Content>
   )
 };
 
