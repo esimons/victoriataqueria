@@ -2,10 +2,10 @@ import React from 'react';
 
 import './_index.css';
 
-const Home = () => {
+const About = () => {
   return (
-    <div>Homeboy</div>
+    <div>About</div>
   )
 };
 
-export default Home;
+export default About;

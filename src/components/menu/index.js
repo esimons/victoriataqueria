@@ -2,10 +2,10 @@ import React from 'react';
 
 import './_index.css';
 
-const Home = () => {
+const Menu = () => {
   return (
-    <div>Homeboy</div>
+    <div>Menu</div>
   )
 };
 
-export default Home;
+export default Menu;
