@@ -11,3 +11,6 @@ deploy:
     secure: 1/yrxSmDSVr7CKJoKL12ZQlHEcmHZKh4rztyKkNdlEzzxb2C6mP1Sp5Ty-Fr7fdlOy
 notifications:
   email: false
+branches:
+  only:
+    master
