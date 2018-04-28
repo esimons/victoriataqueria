@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Content from '../content';
+import Content from '../../components/content';
 
 import './_index.css';
 

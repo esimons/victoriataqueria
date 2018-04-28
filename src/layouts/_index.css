@@ -1,4 +1,4 @@
-@import './styles/_reset.css';
+@import './_reset.css';
 
 :root {
   --Body-spacing--default: 2rem;

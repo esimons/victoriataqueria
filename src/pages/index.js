@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Content from '../content';
+import Content from '../components/content';
 
-import Image from '../../images/lavictoria.jpg';
+import Image from '../images/lavictoria.jpg';
 
 import './_index.css';
 
