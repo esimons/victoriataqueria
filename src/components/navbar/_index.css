@@ -1,7 +1,7 @@
 .Navbar {
   display: flex;
   padding: .5rem;
-  margin: 0 calc(-1 * var(--Body-spacing--offset));
+  margin: 0 calc(-1 * var(--Body-spacing--offset, 2rem));
   background: #b20611;
 }
 .Navbar_item {

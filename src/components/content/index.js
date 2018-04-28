@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import './_index.css';
+import "./_index.css";
 
-const Content = ({children}) => {
-  return (
-    <div className="Content">{children}</div>
-  )
+const Content = ({ children }) => {
+  return <div className="Content">{children}</div>;
 };
 
 export default Content;
