@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from '../components/navbar';
 
+import './_index.css';
+
 const Page = ({children}) => {
   return (
     <div>
