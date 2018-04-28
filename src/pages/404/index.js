@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import Content from '../../components/content';
+import Content from "../../components/content";
 
-import './_index.css';
+import "./_index.css";
 
 const NotFound = () => {
   return (
     <Content>
       <div>Page Not Found!</div>
     </Content>
-  )
+  );
 };
 
 export default NotFound;

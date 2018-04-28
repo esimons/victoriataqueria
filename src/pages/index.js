@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import Content from '../components/content';
+import Content from "../components/content";
 
-import Image from '../images/lavictoria.jpg';
+import Image from "../images/lavictoria.jpg";
 
-import './_index.css';
+import "./_index.css";
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
         <img src={Image} title="La Victoria" alt="" />
       </div>
     </Content>
-  )
+  );
 };
 
 export default Home;
