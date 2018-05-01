@@ -9,6 +9,7 @@
 body {
   padding: var(--Body-spacing--side);
   font-family: Helvetica, sans-serif;
+  background: url('../images/background.jpg');
 }
 
 a:not(:hover) {
