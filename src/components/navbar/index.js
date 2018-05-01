@@ -12,17 +12,17 @@ const Navbar = ({ className }) => {
         </Link>
       </li>
       <li className="Navbar_item">
-        <Link className="Navbar_link" to="about">
+        <Link className="Navbar_link" to="/about">
           About
         </Link>
       </li>
       <li className="Navbar_item">
-        <Link className="Navbar_link" to="menu">
+        <Link className="Navbar_link" to="/menu">
           Menu
         </Link>
       </li>
       <li className="Navbar_item">
-        <Link className="Navbar_link" to="locations">
+        <Link className="Navbar_link" to="/locations">
           Locations
         </Link>
       </li>
