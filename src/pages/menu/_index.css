@@ -1,6 +1,49 @@
-.Menu_paragraph {
+.Menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.Menu_list {
+  width: 100%;
+  padding: 0 1rem;
+}
+.Menu_heading {
+  text-decoration: underline;
+}
+.Menu_subHeading {
+  margin-top: .25rem;
+  font-weight: 700;
+}
+.Menu_item {
   text-align: center;
 }
-.Menu_paragraph:not(:first-child) {
+.Menu_item:not(:first-child) {
   padding-top: 2rem;
+}
+.Menu_luchadore {
+  position: sticky;
+  top: 10px;
+}
+.Menu_luchadore__bottom {
+  /* align-self: flex-end; */
+  top: 85vh;
+}
+.Menu_note {
+  font-size: 85%;
+  font-style: italic;
+}
+.Menu_subList {
+  margin-top: .5rem;
+}
+
+
+.Menu__secondary_list {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+.Menu__secondary_list .Menu_item {
+  padding-top: 0;
+  text-align: center;
 }
