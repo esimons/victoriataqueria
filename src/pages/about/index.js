@@ -18,7 +18,7 @@ const About = () => {
           You deserve the best, you deserve La Victoria.
         </p>
         <p className="About_paragraph">Been provecho!</p>
-        <p className="About_paragraph">Dine In/Take Out/Catering</p>
+        <p className="About_paragraph">Dine In / Take Out / Catering</p>
         <p className="About_paragraph">
           Monday - Saturday<br />
           11:00am - 9:00pm
