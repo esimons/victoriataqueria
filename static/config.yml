@@ -1,0 +1,84 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: src/images
+public_folder: /static
+
+collections:
+  - name: "menu"
+    label: "Menu"
+    files:
+      - file: "src/content/menu/burrito.md"
+        label: Burrito
+        name: burrito
+        fields:
+          - {label: "Title", name: "title", widget: "hidden", default: "Burrito"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Price", name: "price", widget: "string"}
+          - {label: "Ingredients", name: "ingredients", widget: "list"}
+      - file: "src/content/menu/quesadilla.md"
+        label: Quesadilla
+        name: quesadilla
+        fields:
+          - {label: "Title", name: "title", widget: "hidden", default: "Quesadilla"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Price", name: "price", widget: "string"}
+          - {label: "Ingredients", name: "ingredients", widget: "list"}
+      - file: "src/content/menu/taco.md"
+        label: Taco
+        name: taco
+        fields:
+          - {label: "Title", name: "title", widget: "hidden", default: "Taco"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Price", name: "price", widget: "string"}
+          - {label: "Ingredients", name: "ingredients", widget: "list"}
+      - file: "src/content/menu/plato.md"
+        label: Plato Mexicano
+        name: plato
+        fields:
+          - {label: "Title", name: "title", widget: "hidden", default: "Plato Mexicano"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Price", name: "price", widget: "string"}
+          - {label: "Ingredients", name: "ingredients", widget: "list"}
+      - file: "src/content/menu/salad.md"
+        label: Salad
+        name: salad
+        fields:
+          - {label: "Title", name: "title", widget: "hidden", default: "Salad"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Price", name: "price", widget: "string"}
+          - {label: "Ingredients", name: "ingredients", widget: "list"}
+      - file: "src/content/menu/addons.md"
+        label: Addons
+        name: addons
+        fields:
+          - {label: "Title", name: "title", widget: "hidden", default: "Addons"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/content/menu/tortas.md"
+        label: Tortas
+        name: tortas
+        fields:
+          - {label: "Title", name: "title", widget: "hidden", default: "Tortas"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Price", name: "price", widget: "string"}
+          - {label: "Ingredients", name: "ingredients", widget: "list"}
+          - {label: "Types", name: "types", widget: "list", fields: [{label: "Title", name: "title", widget: "string"},{label: "Ingredients", name: "ingredients", widget: "list"}]}
+      - file: "src/content/menu/fillings.md"
+        label: Fillings
+        name: fillings
+        fields:
+          - {label: "Title", name: "title", widget: "hidden", default: "Fillings"}
+          - {label: "List", name: "list", widget: "list", fields: [{label: "Title", name: "title", widget: "string"},{label: "Price", name: "price", widget: "string"}]}
+      - file: "src/content/menu/sides.md"
+        label: Sides
+        name: sides
+        fields:
+          - {label: "Title", name: "title", widget: "hidden", default: "Sides"}
+          - {label: "List", name: "list", widget: "list", fields: [{label: "Title", name: "title", widget: "string"},{label: "Price", name: "price", widget: "string"}]}
+      - file: "src/content/menu/drinks.md"
+        label: Drinks
+        name: drinks
+        fields:
+          - {label: "Title", name: "title", widget: "hidden", default: "Drinks"}
+          - {label: "List", name: "list", widget: "list", fields: [{label: "Title", name: "title", widget: "string"},{label: "Price", name: "price", widget: "string"}]}

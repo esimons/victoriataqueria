@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import Content from "../../components/content";
 import Heading from "../../components/heading";
@@ -7,199 +8,117 @@ import Heading from "../../components/heading";
 
 import "./_index.css";
 
-const Menu = () => {
-  return (
-    <Content className="Menu">
-      <ul className="Menu_list">
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Burrito 5.5*
-          </Heading>
-          <p className="Menu_subHeading">(12” Flour Tortilla)</p>
-          <ul className="Menu_subList">
-            <li>Mexican Rice</li>
-            <li>Beans</li>
-            <li>Pico De Gallo</li>
-            <li>Choice Of Filling</li>
-          </ul>
-        </li>
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Quesadilla 4.95*
-          </Heading>
-          <p className="Menu_subHeading">(10” Flour Tortilla)</p>
-          <ul className="Menu_subList">
-            <li>Cheese</li>
-            <li>Choice Of Filling</li>
-          </ul>
-        </li>
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Taco 2.85
-          </Heading>
-          <ul className="Menu_subList">
-            <li>Soft Corn Tortilla</li>
-            <li>Onions</li>
-            <li>Cilantro</li>
-            <li>Salsa</li>
-            <li>Choice Of Filling</li>
-          </ul>
-        </li>
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Plato Mexicano 5.95*
-          </Heading>
-          <ul className="Menu_subList">
-            <li>Mexican Rice</li>
-            <li>Beans</li>
-            <li>Pico De Gallo</li>
-            <li>Sour Cream</li>
-            <li>Choice Of Filling</li>
-          </ul>
-        </li>
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Salad 3.95
-          </Heading>
-          <ul className="Menu_subList">
-            <li>Lettuce</li>
-            <li>Tomatoes</li>
-            <li>Avacado</li>
-            <li>Onions</li>
-            <li>Queso Fresco</li>
-          </ul>
-        </li>
-        <li className="Menu_item">
-          <p className="Menu_note">
-            *Add Guacamole, Sour Cream Or Cheese .50 Each. Extra Fillings Add
-            1.00 Each
-          </p>
-        </li>
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Tortas 6.50
-          </Heading>
-          <p className="Menu_subHeading">(Mexican Sandwich)</p>
-          <ul className="Menu_subList">
-            <li>Telera Bread</li>
-            <li>Bean Puree</li>
-            <li>Tomato</li>
-            <li>Jalapeños</li>
-            <li>Onions</li>
-            <li>Queso Fresco ‘ Chipotle Mayo</li>
-            <li>Avacado</li>
-            <li>Lettucs*</li>
-          </ul>
-        </li>
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Victoria
-          </Heading>
-          <ul className="Menu_subList">
-            <li>Smoked Ham</li>
-            <li>Pork Carnitas</li>
-          </ul>
-        </li>
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Milanesa *
-          </Heading>
-          <p className="Menu_subHeading">Breaded Chicken Fillet</p>
-        </li>
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Choriqueso
-          </Heading>
-          <ul className="Menu_subList">
-            <li>Mexican Sausage</li>
-            <li>Melted Cheese</li>
-          </ul>
-        </li>
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Dos Caidas
-          </Heading>
-          <ul className="Menu_subList">
-            <li>Pork Carnitas</li>
-            <li>Mexican Sausage</li>
-          </ul>
-        </li>
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            El Chavo *
-          </Heading>
-          <ul className="Menu_subList">
-            <li>Smoked Ham</li>
-          </ul>
-        </li>
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Vegetal *
-          </Heading>
-          <ul className="Menu_subList">
-            <li>Assorted Vegetables</li>
-          </ul>
-        </li>
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Surtido
-          </Heading>
-          <ul className="Menu_subList">
-            <li>Pork Skin</li>
-            <li>Meat</li>
-          </ul>
-        </li>
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Al Pastor
-          </Heading>
-          <ul className="Menu_subList">
-            <li>Marinated Pork</li>
-          </ul>
-        </li>
+const MenuSection = ({ item }) => (
+  <li className="Menu_item">
+    <Heading className="Menu_heading" level="2">
+      {item.title} {item.price}
+    </Heading>
+    {item.description && (
+      <p className="Menu_subHeading">({item.description})</p>
+    )}
+    {item.ingredients && (
+      <ul className="Menu_subList">
+        {item.ingredients.map(ingredient => (
+          <li key={ingredient}>{ingredient}</li>
+        ))}
       </ul>
-      <ul className="Menu__secondary_list">
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Fillings
-          </Heading>
-          <ul className="Menu_subList">
-            <li>Marinated Chicken</li>
-            <li>Pork Carnitas</li>
-            <li>Mexican Sausage</li>
-            <li>Steak</li>
-            <li>Pastor</li>
-            <li>Vegetables</li>
-            <li>Pork Skin</li>
-            <li>Meat</li>
-            <li>Beef Tongue</li>
-          </ul>
-        </li>
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Sides
-          </Heading>
-          <ul className="Menu_subList">
-            <li>Rice 2</li>
-            <li>Beans 2</li>
-            <li>Chips &amp; Salsa 2.5</li>
-            <li>Guacamole 2.75</li>
-          </ul>
-        </li>
-        <li className="Menu_item">
-          <Heading className="Menu_heading" level="2">
-            Drinks
-          </Heading>
-          <ul className="Menu_subList">
-            <li>Horchata 2</li>
-            <li>Jarritos 2</li>
-            <li>Sodas 1.5</li>
-            <li>Water 1.5</li>
-          </ul>
-        </li>
+    )}
+    {item.types && (
+      <ul className="Menu_subList">
+        {item.types.map(type => (
+          <li key={type.title} className="Menu_item">
+            <Heading className="Menu_heading" level="3">
+              {type.title}
+            </Heading>
+            <ul className="Menu_subList">
+              {type.ingredients.map(ingredient => (
+                <li key={ingredient}>{ingredient}</li>
+              ))}
+            </ul>
+          </li>
+        ))}
       </ul>
-    </Content>
-  );
+    )}
+    {item.list && (
+      <ul className="Menu_subList">
+        {item.list.map(listItem => (
+          <li key={listItem.title}>
+            {listItem.title}{listItem.price && ` ${listItem.price}`}
+          </li>
+        ))}
+      </ul>
+    )}
+  </li>
+);
+
+export const Menu = ({ content }) => (
+  <Content className="Menu">
+    <ul className="Menu_list">
+      <MenuSection item={content.burrito} />
+      <MenuSection item={content.quesadilla} />
+      <MenuSection item={content.taco} />
+      <MenuSection item={content.plato} />
+      <MenuSection item={content.salad} />
+      <li className="Menu_item">
+        <p
+          className="Menu_note"
+          dangerouslySetInnerHTML={{ __html: content.addons.html }}
+        />
+      </li>
+      <MenuSection item={content.tortas} />
+    </ul>
+    <ul className="Menu__secondary_list">
+      <MenuSection item={content.fillings} />
+      <MenuSection item={content.sides} />
+      <MenuSection item={content.drinks} />
+    </ul>
+  </Content>
+);
+
+Menu.propTypes = {
+  data: PropTypes.shape({
+    allFile: PropTypes.shape({
+      edges: PropTypes.array
+    })
+  })
 };
 
-export default Menu;
+export const pageQuery = graphql`
+  query MenuQuery {
+    allFile(filter: { relativeDirectory: { eq: "menu" } }) {
+      edges {
+        node {
+          name
+          childMarkdownRemark {
+            html
+            frontmatter {
+              title
+              description
+              price
+              ingredients
+              types {
+                title
+                ingredients
+              }
+              list {
+                title
+                price
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+export default ({ data }) => {
+  const content = data.allFile.edges.map(edge => edge.node).reduce((acc, i) => {
+    acc[i.name] = {
+      ...i.childMarkdownRemark.frontmatter,
+      html: i.childMarkdownRemark.html
+    };
+    return acc;
+  }, {});
+  return <Menu content={content} />;
+};
