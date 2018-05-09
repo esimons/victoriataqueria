@@ -8,6 +8,7 @@ public_folder: /static
 collections:
   - name: "pages"
     label: "Pages"
+    delete: false
     files:
       - file: "src/content/menu.md"
         label: Menu
