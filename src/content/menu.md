@@ -1,89 +1,53 @@
 ---
 burrito:
-  title: Burrito
-  description: '12" Flour Tortilla'
-  price: '5.50 *'
+  description: 12" Flour Tortilla
   ingredients:
     - Mexican Rice
     - Beans
     - Pico De Gallo
     - Choice of Filling
+  price: 5.50 *
+  title: Burrito
 quesadilla:
-  title: Quesadilla
-  description: '10" Flour Tortilla'
-  price: '4.95 *'
+  description: 10" Flour Tortilla
   ingredients:
     - Cheese
     - Choice of Filling
+  price: 4.95 *
+  title: Quesadilla
 taco:
-  title: Taco
   description: ''
-  price: '2.85'
   ingredients:
     - Soft Corn Tortilla
     - Onions
     - Cilantro
     - Salsa
     - Choice of filling
-addons: Add Guacamole, Sour Cream Or Cheese .50 Each. Extra Fillings Add 1.00 Each
-drinks:
-  title: Drinks
-  list: 
-    - title: Horchata
-      price: '2'
-    - title: Jarritos
-      price: '2'
-    - title: Sodas
-      price: '1.5'
-    - title: Water
-      price: '1.5'
-fillings:
-  title: Fillings
-  list:
-    - title: Marinated Chicken
-    - title: Pork Carnitas
-    - title: Mexican Sausage
-    - title: Steak
-    - title: Pastor
-    - title: Vegetables
-    - title: Pork Skin
-    - title: Meat
-    - title: Beef Tongue
-sides:
-  title: Sides
-  list: 
-    - title: Rice
-      price: '2'
-    - title: Beans
-      price: '2'
-    - title: Chips & Salsa
-      price: '2.5'
-    - title: Guacamole
-      price: '2.75'
+  price: '2.85'
+  title: Taco
 plato:
-  title: Plato Mexicano
   description: ''
-  price: '5.95 *'
   ingredients:
     - Mexican Rice
     - Beans
     - Pico De Gallo
     - Sour Cream
     - Choice of filling
+  price: 5.95 *
+  title: Plato Mexicano
 salad:
-  title: Salad
   description: ''
-  price: '3.95'
   ingredients:
     - Lettuce
     - Tomatoes
     - Avocado
     - Onions
     - Queso Fresco
+  price: '3.95'
+  title: Salad
+addons: 'Add Guacamole, Sour Cream Or Cheese .50 Each. Extra Fillings Add 1.00 Each'
 tortas:
-  title: Tortas
   description: Mexican Sandwich
-  price: '6.50'
   ingredients:
     - Telera Bread
     - Bean Puree
@@ -94,33 +58,69 @@ tortas:
     - Chipotle Mayo
     - Avocado
     - Lettuce
+  price: '6.50'
+  title: Tortas
   types:
-    - title: Victoria
-      ingredients:
+    - ingredients:
         - Smoked Ham
         - Pork Carnitas
-    - title: Milanesa
-      ingredients:
+      title: Victoria
+    - ingredients:
         - Breaded Chicken Fillet
-    - title: Choriqueso
-      ingredients:
+      title: Milanesa
+    - ingredients:
         - Mexican Sausage
         - Melted Cheese
-    - title: Dos Caidas
-      ingredients:
+      title: Choriqueso
+    - ingredients:
         - Pork Carnitas
         - Mexican Sausage
-    - title: El Chavo
-      ingredients:
+      title: Dos Caidas
+    - ingredients:
         - Smoked Ham
-    - title: Vegetal
-      ingredients:
+      title: El Chavo
+    - ingredients:
         - Assorted Vegetables
-    - title: Surtido
-      ingredients:
+      title: Vegetal
+    - ingredients:
         - Pork Skin
         - Meat
-    - title: Al Pastor
-      ingredients:
+      title: Surtido
+    - ingredients:
         - Marinated Pork
+      title: Al Pastor
+fillings:
+  list:
+    - title: Marinated Chicken
+    - title: Pork Carnitas
+    - title: Mexican Sausage
+    - title: Steak
+    - title: Pastor
+    - title: Vegetables
+    - title: Pork Skin / Meat
+    - title: Beef Tongue
+  title: Fillings
+sides:
+  list:
+    - price: '2'
+      title: Rice
+    - price: '2'
+      title: Beans
+    - price: '2.5'
+      title: Chips & Salsa
+    - price: '2.75'
+      title: Guacamole
+  title: Sides
+drinks:
+  list:
+    - price: '2'
+      title: Horchata
+    - price: '2'
+      title: Jarritos
+    - price: '1.5'
+      title: Sodas
+    - price: '1.5'
+      title: Water
+  title: Drinks
 ---
+
