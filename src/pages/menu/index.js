@@ -43,7 +43,8 @@ const MenuSection = ({ item }) => (
       <ul className="Menu_subList">
         {item.list.map(listItem => (
           <li key={listItem.title}>
-            {listItem.title}{listItem.price && ` ${listItem.price}`}
+            {listItem.title}
+            {listItem.price && ` ${listItem.price}`}
           </li>
         ))}
       </ul>
@@ -60,10 +61,7 @@ export const Menu = ({ content }) => (
       <MenuSection item={content.plato} />
       <MenuSection item={content.salad} />
       <li className="Menu_item">
-        <p
-          className="Menu_note"
-          dangerouslySetInnerHTML={{ __html: content.addons.html }}
-        />
+        <p className="Menu_note">{content.addons}</p>
       </li>
       <MenuSection item={content.tortas} />
     </ul>
@@ -85,7 +83,7 @@ Menu.propTypes = {
 
 export const pageQuery = graphql`
   query MenuQuery {
-    allFile(filter: {relativePath: {eq: "menu.md"}}) {
+    allFile(filter: { relativePath: { eq: "menu.md" } }) {
       edges {
         node {
           childMarkdownRemark {
