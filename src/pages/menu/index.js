@@ -85,24 +85,71 @@ Menu.propTypes = {
 
 export const pageQuery = graphql`
   query MenuQuery {
-    allFile(filter: { relativeDirectory: { eq: "menu" } }) {
+    allFile(filter: {relativePath: {eq: "menu.md"}}) {
       edges {
         node {
-          name
           childMarkdownRemark {
-            html
             frontmatter {
-              title
-              description
-              price
-              ingredients
-              types {
+              burrito {
                 title
+                description
+                price
                 ingredients
               }
-              list {
+              taco {
                 title
+                description
                 price
+                ingredients
+              }
+              quesadilla {
+                title
+                description
+                price
+                ingredients
+              }
+              salad {
+                title
+                description
+                price
+                ingredients
+              }
+              plato {
+                title
+                description
+                price
+                ingredients
+              }
+              addons
+              drinks {
+                title
+                list {
+                  title
+                  price
+                }
+              }
+              fillings {
+                title
+                list {
+                  title
+                }
+              }
+              sides {
+                title
+                list {
+                  title
+                  price
+                }
+              }
+              tortas {
+                title
+                description
+                price
+                ingredients
+                types {
+                  title
+                  ingredients
+                }
               }
             }
           }
@@ -113,12 +160,6 @@ export const pageQuery = graphql`
 `;
 
 export default ({ data }) => {
-  const content = data.allFile.edges.map(edge => edge.node).reduce((acc, i) => {
-    acc[i.name] = {
-      ...i.childMarkdownRemark.frontmatter,
-      html: i.childMarkdownRemark.html
-    };
-    return acc;
-  }, {});
+  const content = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
   return <Menu content={content} />;
 };
