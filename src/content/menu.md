@@ -83,8 +83,7 @@ tortas:
         - Assorted Vegetables
       title: Vegetal
     - ingredients:
-        - Pork Skin
-        - Meat
+        - Pork Skin / Meat
       title: Surtido
     - ingredients:
         - Marinated Pork
