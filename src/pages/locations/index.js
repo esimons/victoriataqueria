@@ -6,35 +6,62 @@ import Paragraph from "../../components/paragraph";
 
 import "./_index.css";
 
-const Locations = () => {
+const LocationItem = ({
+  city,
+  address,
+  phone,
+  hours
+}) => (
+  <div className="Locations_item">
+    <Heading>{city}</Heading>
+    <Paragraph className="Locations_paragraph">
+      {address}<br />
+      {phone}<br />
+      {hours.map(({day, time}, i) => [
+        i === 0 ? null : <br />,
+        day,
+        <br />,
+        time
+      ])}
+    </Paragraph>
+  </div>
+);
+
+export const Locations = ({content}) => {
   return (
     <Content className="Locations">
       <div className="Locations_wrap">
-        <div className="Locations_item">
-          <Heading children="Arlington" />
-          <Paragraph className="Locations_paragraph">
-            12 Medford St.<br />
-            P 781 859-5503<br />
-            Monday - Saturday<br />
-            11:00 AM - 9:00 PM<br />
-            Sunday<br />
-            11:00 AM - 8:00 PM
-          </Paragraph>
-        </div>
-        <div className="Locations_item">
-          <Heading children="Beverly" />
-          <Paragraph className="Locations_paragraph">
-            6 Wallis st.<br />
-            P 978 969-2228<br />
-            Monday - Saturday<br />
-            11:00 AM - 9:00 PM<br />
-            Sunday<br />
-            Closed
-          </Paragraph>
-        </div>
+        {content.locations.map(location => <LocationItem {...location} />)}
       </div>
     </Content>
   );
 };
 
-export default Locations;
+export const pageQuery = graphql`
+  query LocationsQuery {
+    allFile(filter: { relativePath: { eq: "locations.md" } }) {
+      edges {
+        node {
+          childMarkdownRemark {
+            frontmatter {
+              locations {
+                city
+                address
+                phone
+                hours {
+                  day
+                  time
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+export default ({ data }) => {
+  const content = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
+  return <Locations content={content} />;
+};
